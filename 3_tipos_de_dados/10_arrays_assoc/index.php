@@ -2,7 +2,7 @@
 
     $arr = ['nome' => 'Shark', 'patas' => 4, 'cor' => 'Marrom'];
 
-    echo $arr['nome']; //Sjark
+    echo $arr['nome']; //Shark
     echo "<br>";
     print_r($arr); // Array ( [nome] => Shark [patas] => 4 [cor] => Marrom )
     echo "<br>";
