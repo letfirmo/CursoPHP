@@ -4,4 +4,4 @@
 
     echo "A idade é $idade <br>";
 
-    include "";
+    include __DIR__ . "/../testando.php";
