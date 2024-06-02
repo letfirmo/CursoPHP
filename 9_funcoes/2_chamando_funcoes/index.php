@@ -10,7 +10,8 @@
 
     }
 
-    //chamndo / invoncanado cuncao
+    //chamando / invoncanado cuncao
+    soma();
     soma();
 
     //funcao do php que deixa as letras maiusculas
