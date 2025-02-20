@@ -12,7 +12,7 @@
         //Ativar o modo de erros
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    } catch(PDOExpection $e) {
+    } catch(PDOException $e) {
         // erro na conexão
         $error = $e->getMessage();
         echo "Erro: $error";
