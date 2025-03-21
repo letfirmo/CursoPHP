@@ -13,7 +13,7 @@
     margin: 0 auto;
 }
 
-#contacts-table thead {
+#faixa{
     color: #FFF;
     background-color: #007BFF;
 }
@@ -38,6 +38,11 @@
 
 .edit-icon {
     color: #007BFF;
+}
+
+.delete-form{
+    display: inline-block;
+    
 }
 
 .delete-btn {
@@ -108,4 +113,8 @@
     display: contents;
 }
 
+/* mobile */
 
+#home-link {
+    display: none;
+}
