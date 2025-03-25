@@ -12,7 +12,7 @@
     }
 
     interface UserDAOInterface{
-        public function buldUser($data);
+        public function buildUser($data);
         public function create(User $user, $authUser = false);
         public function update(user $user);
         public function verifyToken($protected = false);

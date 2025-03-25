@@ -7,24 +7,27 @@
         private $conn;
         private $url;
 
-        public function _construct(PDA $conn, %url){
+        public function __construct(PDA $conn, $url){
             $this->conn = $conn;
             $this->url = $url; 
         }
 
-        public function create(User $user, $authUser = false){
-            $user = new User;
+        public function buildUser($data) {
+            $user = new User();
 
-            $user->id = $data["id"]
-            $user->name = $data["name"]
-            $user->lastname = $data["lastname"]
-            $user->email = $data["email"]
-            $user->password = $data["password"]
-            $user->image = $data["image"]
-            $user->bio = $data["bio"]
-            $user->token = $data["token"]
+            $user->id = $data["id"];
+            $user->name = $data["name"];
+            $user->lastname = $data["lastname"];
+            $user->email = $data["email"];
+            $user->password = $data["password"];
+            $user->image = $data["image"];
+            $user->bio = $data["bio"];
+            $user->token = $data["token"];
             
             return $user;
+        }
+        public function create(User $user, $authUser = false){
+            
         }
         public function update(user $user){
 
