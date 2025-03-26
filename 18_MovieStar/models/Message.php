@@ -12,7 +12,7 @@
             $_SESSION["type"] = $type;
 
             if($redirect != "back") {
-                header("Location: $this->" . $redirect);
+                header("Location: $this->url" . $redirect);
             } else{
                 header("Location: " . $_SERVER["HTTP_REFERER"]);
             }
