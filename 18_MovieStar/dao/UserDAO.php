@@ -78,17 +78,20 @@
             }
         }
 
-        public function setTokenToSession($token, $redirect = true){
+        public function setTokenToSession($token, $redirect = true) {
 
-            //Salvar token na session
+            // Salvar token na session
             $_SESSION["token"] = $token;
-
+      
             if($redirect) {
-                //redireciona para o perfil do usuario
-                $this->message->setMessage("Seja bem-vindo!", "success", "editprofile.php");
+      
+              // Redireciona para o perfil do usuario
+              $this->message->setMessage("Seja bem-vindo!", "success", "editprofile.php");
+      
             }
+      
+          }
 
-        }
         public function authenticateUser($email, $password){
 
         }
