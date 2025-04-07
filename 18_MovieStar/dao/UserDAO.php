@@ -55,7 +55,6 @@
         }
 
         public function update(user $user){
-
         }
 
         public function verifyToken($protected = false){
@@ -69,17 +68,17 @@
         
                 if($user) {
                     return $user;
-                } else {
+                } else if($protected){
                     // Redireciona usuário não autenticado
                     $this->message->setMessage("Faça a autenticação para acessar esta página!", "error", "index.php");
                 }
         
-            } else {
-                return false;
+            }  else if($protected){
+                // Redireciona usuário não autenticado
+                $this->message->setMessage("Faça a autenticação para acessar esta página!", "error", "index.php");
             }
         }
         
-
         public function setTokenToSession($token, $redirect = true) {
 
             // Salvar token na session
@@ -92,10 +91,9 @@
       
             }
       
-          }
+        }
 
         public function authenticateUser($email, $password){
-
         }
 
         public function findByEmail($email){
@@ -130,7 +128,6 @@
         }
         
         public function findById($id){
-
         }
 
         public function findByToken($token){
@@ -164,7 +161,14 @@
 
         }
 
-        public function changePassword(USER $user){
+        public function destroyToken(){
+            //remove token da session
+            $_SESSION["token"] = "";
 
+            //redirecionar e apresentar a mnesagem de sucesso
+            $this->message->setMessage("Você fez logout com sucesso", "success", "index.php");
+        }
+
+        public function changePassword(USER $user){
         }
     }
